@@ -21,3 +21,21 @@ curl -X POST http://18.215.242.60:5000/webhook/inbound \
     "message_type": "reply",
     "reply": { "id": "NOMBRE_OK", "title": "Sí, es correcto" }
   }'
+
+
+  curl -X POST http://18.215.242.60:5000/webhook/inbound \
+  -H "Content-Type: application/json" \
+  -d '{
+    "from": {"number":"5215525596591"},
+    "message_type": "reply",
+    "reply": { "id": "NOMBRE_EDIT", "title": "No, favor de corregir nombre" }
+  }'
+
+
+curl -X POST http://18.215.242.60:5000/webhook/inbound \
+  -H "Content-Type: application/json" \
+  -d '{
+    "from": {"number":"5215525596591"},
+    "message": {"content":{"type":"text","text":"Juan Pérez"}}
+  }'
+

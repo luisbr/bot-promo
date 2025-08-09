@@ -1,9 +1,8 @@
 from flask import Flask
+import logging
 from config import init_config
 from routes.webhook import bp as webhook_bp
 from routes.health import bp as health_bp
-
-from messages import MENSAJES, render_msg
 
 def create_app():
     init_config()
@@ -11,7 +10,6 @@ def create_app():
     app.register_blueprint(health_bp)
     app.register_blueprint(webhook_bp)
     return app
-    
 
 app = create_app()
 
