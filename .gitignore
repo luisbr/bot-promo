@@ -1,0 +1,27 @@
+# Python / Flask
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+instance/
+.env
+.env.*
+*.sqlite3
+.mypy_cache/
+.pytest_cache/
+.coverage*
+dist/
+build/
+
+# Node (si tienes scripts o frontend)
+node_modules/
+npm-debug.log*
+yarn-error.log
+.pnpm-store/
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
